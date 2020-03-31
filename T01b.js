@@ -38,10 +38,8 @@ let formatTitle = line => {
         let titleSize = line.text
             .split('')
             .map( 
-                function(e, i) {
-                    if(e === '#'){
-                        return i;
-                    } 
+                (e, i) => {
+                    if(e === '#') return i;
                 })
             .filter(item => item !== undefined)
             .length
